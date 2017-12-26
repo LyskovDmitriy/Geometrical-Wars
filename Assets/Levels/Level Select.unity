@@ -683,7 +683,12 @@ Prefab:
     - target: {fileID: 114083734199632476, guid: a62818edd8610254f98477d454a5794b,
         type: 2}
       propertyPath: m_Text
-      value: Coming Soon
+      value: Level 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114425263143859702, guid: a62818edd8610254f98477d454a5794b,
+        type: 2}
+      propertyPath: levelName
+      value: Level 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a62818edd8610254f98477d454a5794b, type: 2}

@@ -474,11 +474,11 @@ MonoBehaviour:
     towerDamage: 1
     towerRange: 2
   - upgradePrice: 180
-    attackSpeed: 18
+    attackSpeed: 19
     towerDamage: 1
     towerRange: 2.2
   - upgradePrice: 250
-    attackSpeed: 13
+    attackSpeed: 15
     towerDamage: 2
     towerRange: 2.4
 --- !u!114 &114166877716832312

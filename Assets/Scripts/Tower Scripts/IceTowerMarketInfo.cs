@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class IceTowerMarketInfo : TowerMarketInfoBase  
@@ -47,7 +48,7 @@ public class IceTowerMarketInfo : TowerMarketInfoBase
 			currentAttackRange = iceTowerLevels[currentLevel].towerRange + upgradeBonuses.additionalRange;
 			currentExplosionRange = iceTowerLevels[currentLevel].explosionRange + upgradeBonuses.additionalExplosionRange;
 			currentFreezingRate = iceTowerLevels[currentLevel].freezingRate - upgradeBonuses.additionalFreezingRate;
-			currentFreezingTime = iceTowerLevels[currentLevel].freezingTime + upgradeBonuses.additionalFreezingTime;
+			currentFreezingTime = (float)Math.Round(iceTowerLevels[currentLevel].freezingTime + upgradeBonuses.additionalFreezingTime, 2);
 
 			switch (currentLevel)
 			{
@@ -68,7 +69,7 @@ public class IceTowerMarketInfo : TowerMarketInfoBase
 			currentAttackSpeed += upgradeBonuses.additionalAttackSpeed;
 			currentAttackRange += upgradeBonuses.additionalRange;
 			currentExplosionRange += upgradeBonuses.additionalExplosionRange;
-			currentFreezingRate -= upgradeBonuses.additionalFreezingRate;
+			currentFreezingRate = (float)Math.Round(currentFreezingRate - upgradeBonuses.additionalFreezingRate, 2);
 			currentFreezingTime += upgradeBonuses.additionalFreezingTime;
 			armorPiercing = upgradeBonuses.armorPiercing;
 		}

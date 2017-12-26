@@ -10,6 +10,7 @@ public class Cheats : MonoBehaviour
 	
 	void Update () 
 	{
+		#if UNITY_EDITOR || UNITY_STANDALONE_WIN
 		if (Input.GetKeyDown(KeyCode.K) && Input.GetKey(KeyCode.LeftControl))
 		{
 			EnemyHealthManager[] enemies = FindObjectsOfType<EnemyHealthManager>();
@@ -26,10 +27,11 @@ public class Cheats : MonoBehaviour
 		{
 			Time.timeScale += 0.5f;
 		}
-		if (Input.GetKeyDown(KeyCode.E))
+		if (Input.GetKeyDown(KeyCode.E) && Time.timeScale > 0.0f)
 		{
 			Time.timeScale -= 0.5f;
 		}
+		#endif
 	}
 
 

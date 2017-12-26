@@ -14,13 +14,13 @@ public class EnemyWavesManager : MonoBehaviour
 	public float timeBetweenEachEnemySpawn;
 	public float timeBetweenWaves;
 	public float timeToFirstWave;
-	public int currentWave;
 
 
 	private GoldManager goldManager;
 	private RouteManager routeManager;
 	private Color baseColor;
 	private float betweenWavesCounter;
+	private int currentWave;
 	private bool waveHasStarted;
 	private bool allEnemiesInWaveSpawned;
 
