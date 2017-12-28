@@ -9,6 +9,7 @@ public class EnemyWavesManager : MonoBehaviour
 	public EnemyWave[] waves;
 	public Transform[] spawnPoints;
 	public Transform positionToSpawnGold;
+	public GameObject startWaveButton;
 	public Text nextWaveTimeText;
 	public Text waveNumberText;
 	public float timeBetweenEachEnemySpawn;
@@ -23,6 +24,15 @@ public class EnemyWavesManager : MonoBehaviour
 	private int currentWave;
 	private bool waveHasStarted;
 	private bool allEnemiesInWaveSpawned;
+
+
+	public void StartWave()
+	{
+		if (betweenWavesCounter > 0)
+		{
+			betweenWavesCounter = 0;
+		}
+	}
 
 
 	IEnumerator SpawnWave()
@@ -80,6 +90,7 @@ public class EnemyWavesManager : MonoBehaviour
 				nextWaveTimeText.color = Color.red;
 				StartCoroutine(SpawnWave());
 				waveHasStarted = true;
+				startWaveButton.SetActive(false);
 			}
 			else if ((FindObjectOfType<EnemyHealthManager>() == null) && allEnemiesInWaveSpawned) //if the wave is completed
 			{
@@ -99,6 +110,7 @@ public class EnemyWavesManager : MonoBehaviour
 					nextWaveTimeText.color = baseColor;
 					nextWaveTimeText.text = timeBetweenWaves.ToString();
 					betweenWavesCounter = timeBetweenWaves;
+					startWaveButton.SetActive(true);
 				}
 				waveHasStarted = false;
 			}

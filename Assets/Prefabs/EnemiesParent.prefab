@@ -55,12 +55,12 @@ MonoBehaviour:
   waves: []
   spawnPoints: []
   positionToSpawnGold: {fileID: 0}
+  startWaveButton: {fileID: 0}
   nextWaveTimeText: {fileID: 0}
   waveNumberText: {fileID: 0}
   timeBetweenEachEnemySpawn: 0.3
-  timeBetweenWaves: 10
-  timeToFirstWave: 15
-  currentWave: 0
+  timeBetweenWaves: 15
+  timeToFirstWave: 20
 --- !u!114 &114616863857495538
 MonoBehaviour:
   m_ObjectHideFlags: 1

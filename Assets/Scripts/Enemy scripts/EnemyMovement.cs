@@ -12,7 +12,6 @@ public class EnemyMovement : MonoBehaviour
 
 
 	private Rigidbody2D rBody;
-	private SpriteRenderer spriteRenderer;
 	private Transform targetPoint;
 	private float slowDownRate;
 	private float freezeCounter;
@@ -43,7 +42,6 @@ public class EnemyMovement : MonoBehaviour
 	void Awake () 
 	{
 		rBody = GetComponent<Rigidbody2D>();
-		spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
 

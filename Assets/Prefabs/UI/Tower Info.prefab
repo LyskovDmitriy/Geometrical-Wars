@@ -640,6 +640,7 @@ MonoBehaviour:
   sellingPriceText: {fileID: 114382739335590990}
   marketScript: {fileID: 0}
   towerHolder: {fileID: 0}
+  isBuyingInfo: 0
 --- !u!114 &114688484913173322
 MonoBehaviour:
   m_ObjectHideFlags: 1
