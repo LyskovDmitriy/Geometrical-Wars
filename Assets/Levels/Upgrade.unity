@@ -896,7 +896,7 @@ Prefab:
     - target: {fileID: 114807949023113954, guid: d19bcbdacd8138f4f81861f74b145c1b,
         type: 2}
       propertyPath: m_Text
-      value: + 0.6 Attack Range
+      value: + 0.5 Attack Range
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d19bcbdacd8138f4f81861f74b145c1b, type: 2}
@@ -1086,7 +1086,7 @@ MonoBehaviour:
     armorPiercing: 0
     basePriceDecrease: 0
     upgradePriceDecrease: 0
-    additionalAttackSpeed: 0.4
+    additionalAttackSpeed: 0.3
     additionalRange: 0
     additionalExplosionRange: 0
     additionalFreezingRate: 0
@@ -1094,7 +1094,7 @@ MonoBehaviour:
   - starsPrice: 0
     towerName: 
     additionalDamage: 0
-    armorPiercing: 4
+    armorPiercing: 3
     basePriceDecrease: 0
     upgradePriceDecrease: 0
     additionalAttackSpeed: 0
@@ -1109,7 +1109,7 @@ MonoBehaviour:
     basePriceDecrease: 0
     upgradePriceDecrease: 0
     additionalAttackSpeed: 0
-    additionalRange: 0.6
+    additionalRange: 0.5
     additionalExplosionRange: 0
     additionalFreezingRate: 0
     additionalFreezingTime: 0
@@ -4693,7 +4693,7 @@ Prefab:
     - target: {fileID: 114807949023113954, guid: d19bcbdacd8138f4f81861f74b145c1b,
         type: 2}
       propertyPath: m_Text
-      value: + 4 Armor Piercing
+      value: + 3 Armor Piercing
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d19bcbdacd8138f4f81861f74b145c1b, type: 2}
@@ -6717,7 +6717,7 @@ Prefab:
     - target: {fileID: 114807949023113954, guid: d19bcbdacd8138f4f81861f74b145c1b,
         type: 2}
       propertyPath: m_Text
-      value: + 0.4 Attack Speed
+      value: + 0.3 Attack Speed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d19bcbdacd8138f4f81861f74b145c1b, type: 2}

@@ -937,7 +937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerName: Ice Tower
   currentAttackSpeed: 1
-  currentAttackRange: 2.5
+  currentAttackRange: 2.3
   currentDamage: 2
   armorPiercing: 0
   currentPrice: 250
@@ -948,21 +948,21 @@ MonoBehaviour:
   - upgradePrice: 150
     attackSpeed: 1.5
     towerDamage: 2
-    towerRange: 2.6
+    towerRange: 2.5
     explosionRange: 0.8
     freezingRate: 0.8
     freezingTime: 1
   - upgradePrice: 200
     attackSpeed: 2
     towerDamage: 2
-    towerRange: 2.8
+    towerRange: 2.65
     explosionRange: 1
     freezingRate: 0.75
     freezingTime: 1.25
   - upgradePrice: 250
     attackSpeed: 2.5
     towerDamage: 2
-    towerRange: 3
+    towerRange: 2.8
     explosionRange: 1.25
     freezingRate: 0.7
     freezingTime: 1.5

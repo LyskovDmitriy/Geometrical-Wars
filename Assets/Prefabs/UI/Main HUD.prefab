@@ -2896,7 +2896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldText: {fileID: 114209083133394124}
-  currentGold: 850
+  currentGold: 1500
   goldObject: {fileID: 1770909259679596, guid: 579a29d1dd8a0444aadb881520c638fe, type: 2}
 --- !u!114 &114760786830017728
 MonoBehaviour:
@@ -4288,7 +4288,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 155.8, y: -17.7}
+  m_AnchoredPosition: {x: 140, y: -17.7}
   m_SizeDelta: {x: 160, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224345304689213536
@@ -4557,7 +4557,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -75}
+  m_AnchoredPosition: {x: 60, y: -75}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224584919817568706

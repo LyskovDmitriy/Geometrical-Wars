@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
 	public AudioClip[] menuThemes;
 	public AudioClip[] battleThemes;
 	public float timeToVolumeDown;
+	public float initialVolume;
 	
 
 	private AudioSource audioSource;
@@ -22,7 +23,6 @@ public class AudioManager : MonoBehaviour
 	{
 		if (audioSource.isPlaying)
 		{
-			float initialVolume = audioSource.volume;
 			while (audioSource.volume > 0.0f)
 			{
 				audioSource.volume -= initialVolume * Time.deltaTime;
@@ -45,19 +45,14 @@ public class AudioManager : MonoBehaviour
 			DontDestroyOnLoad(gameObject);
 			SceneManager.sceneLoaded += OnLevelFinishedLoading;
 			subscribedToSceneLoad = true;
+			isPlayingMenuTheme = false;
 		}
 		else if (audioManager != this)
 		{
 			Destroy(gameObject);
 		}
 		audioSource = GetComponent<AudioSource>();
-	}
-
-
-	void Start()
-	{
-		isPlayingMenuTheme = false;
-		OnLevelFinishedLoading(SceneManager.GetActiveScene(), LoadSceneMode.Single);
+		audioSource.volume = initialVolume;
 	}
 
 

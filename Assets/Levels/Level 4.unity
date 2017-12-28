@@ -588,6 +588,11 @@ Prefab:
       propertyPath: spawnPoints.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114576307774164660, guid: 9a6ff25ec58e5714c9e59cef2fb25743,
+        type: 2}
+      propertyPath: nextWaveInfo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114616863857495538, guid: 9a6ff25ec58e5714c9e59cef2fb25743,
         type: 2}
       propertyPath: routes.Array.data[0].points.Array.size
@@ -1046,6 +1051,11 @@ Prefab:
       propertyPath: startWaveButton
       value: 
       objectReference: {fileID: 902993362}
+    - target: {fileID: 114576307774164660, guid: 9a6ff25ec58e5714c9e59cef2fb25743,
+        type: 2}
+      propertyPath: nextWaveInfo.Array.data[0]
+      value: 
+      objectReference: {fileID: 951276859}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a6ff25ec58e5714c9e59cef2fb25743, type: 2}
   m_IsPrefabParent: 0
@@ -1594,8 +1604,9 @@ GameObject:
   m_Component:
   - component: {fileID: 951276857}
   - component: {fileID: 951276858}
+  - component: {fileID: 951276859}
   m_Layer: 0
-  m_Name: Arrow
+  m_Name: Arrow 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1656,6 +1667,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &951276859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 951276856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cf5ed2b46905454eab6268fa321e4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoPanelPrefab: {fileID: 1588194876257802, guid: 76aa0d5206c18174fbfa7712731082d7,
+    type: 2}
+  firstEnemySpawnOffset: {x: -1, y: 2.5, z: 0}
+  distanceBetweenInfoPanels: {x: 0.75, y: 0, z: 0}
 --- !u!1001 &953621396
 Prefab:
   m_ObjectHideFlags: 0

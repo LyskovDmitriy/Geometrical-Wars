@@ -956,7 +956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerName: Fire Tower
   currentAttackSpeed: 2.7
-  currentAttackRange: 2.6
+  currentAttackRange: 2.25
   currentDamage: 3
   armorPiercing: 1
   currentPrice: 350
@@ -965,17 +965,17 @@ MonoBehaviour:
   - upgradePrice: 200
     attackSpeed: 3.1
     towerDamage: 4
-    towerRange: 2.9
+    towerRange: 2.5
     explosionRange: 1
   - upgradePrice: 250
     attackSpeed: 3.5
     towerDamage: 4
-    towerRange: 3.2
+    towerRange: 2.75
     explosionRange: 1.1
   - upgradePrice: 300
     attackSpeed: 4
     towerDamage: 5
-    towerRange: 3.5
+    towerRange: 3
     explosionRange: 1.25
 --- !u!114 &114929408158031224
 MonoBehaviour:

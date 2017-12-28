@@ -39,7 +39,7 @@ public class TowerAttack : MonoBehaviour
 		armorPiercing = piercing;
 		attackSpeed = speed;
 		attackRange = range;
-		attackTriggerCircle.radius = attackRange;
+		attackTriggerCircle.radius = attackRange * 2 / transform.localScale.x;
 		attackRangeSprite.transform.localScale = new Vector3(attackRange * 2, attackRange * 2, attackRangeSprite.transform.localScale.z);
 	}
 

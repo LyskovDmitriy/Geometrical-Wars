@@ -8,11 +8,13 @@ public class VolumeSlider : MonoBehaviour
 
 	private Slider volumeSlider;
 	private AudioSource audioSource;
+	private AudioManager manager;
 
 
 	public void OnChangeVolume(float volume)
 	{
 		audioSource.volume = volume;
+		manager.initialVolume = volume;
 	}
 
 	
@@ -24,8 +26,8 @@ public class VolumeSlider : MonoBehaviour
 
 	void Start()
 	{
-		AudioManager manager = FindObjectOfType<AudioManager>();
+		manager = FindObjectOfType<AudioManager>();
 		audioSource = manager.GetComponent<AudioSource>();
-		volumeSlider.value = audioSource.volume;
+		volumeSlider.value = manager.initialVolume;
 	}
 }

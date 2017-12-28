@@ -157,4 +157,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f3b79b4b079d2eb4b902db9ab9cc7af2, type: 3}
   - {fileID: 8300000, guid: 3eb55e0dacc225046b5cbe2a9b44530e, type: 3}
   - {fileID: 8300000, guid: 2d4d9ef5bb946a646b827dba030c828d, type: 3}
-  timeToVolumeDown: 1
+  timeToVolumeDown: 0.5
+  initialVolume: 1

@@ -8,6 +8,7 @@ public class EnemyWavesManager : MonoBehaviour
 
 	public EnemyWave[] waves;
 	public Transform[] spawnPoints;
+	public NextWaveEnemiesInfo[] nextWaveInfo;
 	public Transform positionToSpawnGold;
 	public GameObject startWaveButton;
 	public Text nextWaveTimeText;
@@ -72,6 +73,36 @@ public class EnemyWavesManager : MonoBehaviour
 		allEnemiesInWaveSpawned = false;
 		baseColor = nextWaveTimeText.color;
 		nextWaveTimeText.text = timeBetweenWaves.ToString();
+		SendInfo();
+	}
+
+
+	void SendInfo()
+	{
+		for (int point = 0; point < spawnPoints.Length; point++)
+		{
+			List<EnemyGroup> enemyGroups = new List<EnemyGroup>(0);
+			for (int i = 0; i < waves[currentWave].enemyGroups.Length; i++)
+			{
+				if (waves[currentWave].enemyGroups[i].trailNumber == point)
+				{
+					enemyGroups.Add(waves[currentWave].enemyGroups[i]);
+				}
+			}
+			if (enemyGroups.Count > 0)
+			{
+				nextWaveInfo[point].ShowInfo(enemyGroups);
+			}
+		}
+	}
+
+
+	void DeleteInfo()
+	{
+		for (int point = 0; point < spawnPoints.Length; point++)
+		{
+			nextWaveInfo[point].DeleteInfo();
+		}
 	}
 	
 	
@@ -86,6 +117,7 @@ public class EnemyWavesManager : MonoBehaviour
 		{
 			if (!waveHasStarted)
 			{
+				DeleteInfo();
 				nextWaveTimeText.text = "STARTED";
 				nextWaveTimeText.color = Color.red;
 				StartCoroutine(SpawnWave());
@@ -106,6 +138,7 @@ public class EnemyWavesManager : MonoBehaviour
 				}
 				else
 				{
+					SendInfo();
 					waveNumberText.text = "Wave: " + (currentWave + 1);
 					nextWaveTimeText.color = baseColor;
 					nextWaveTimeText.text = timeBetweenWaves.ToString();
