@@ -15,7 +15,6 @@ public class AudioManager : MonoBehaviour
 	
 
 	private AudioSource audioSource;
-	private bool subscribedToSceneLoad;
 	private bool isPlayingMenuTheme;
 
 
@@ -33,7 +32,7 @@ public class AudioManager : MonoBehaviour
 			audioSource.volume = initialVolume;
 		}
 
-		audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
+		audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)], audioSource.volume);
 	}
 
 
@@ -44,7 +43,6 @@ public class AudioManager : MonoBehaviour
 			audioManager = this;
 			DontDestroyOnLoad(gameObject);
 			SceneManager.sceneLoaded += OnLevelFinishedLoading;
-			subscribedToSceneLoad = true;
 			isPlayingMenuTheme = false;
 		}
 		else if (audioManager != this)
@@ -56,7 +54,7 @@ public class AudioManager : MonoBehaviour
 	}
 
 
-	void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+	void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode = LoadSceneMode.Single)
 	{
 		if (scene.name.Contains("Level ") && scene.name != "Level Select")
 		{
@@ -77,6 +75,15 @@ public class AudioManager : MonoBehaviour
 	void OnDisable()
 	{
 		SceneManager.sceneLoaded -= OnLevelFinishedLoading;
-		subscribedToSceneLoad = false;
+	}
+
+
+	void Update()
+	{
+		if (!audioSource.isPlaying)
+		{
+			isPlayingMenuTheme = false;
+			OnLevelFinishedLoading(SceneManager.GetActiveScene());
+		}
 	}
 }
